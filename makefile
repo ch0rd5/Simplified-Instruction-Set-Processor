@@ -8,4 +8,4 @@ helpers.o: helpers.cpp helpers.h
 	g++ -std=c++17 -Wall -c helpers.cpp
 
 clean:
-	rm -f main.o helpers.o driver
+	rm *.o driver
