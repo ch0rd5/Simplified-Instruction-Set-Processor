@@ -1,12 +1,10 @@
 #include "helpers.h"
 #include <iostream>
-#include <cstdlib>  // for stoi
+#include <cstdlib>
 
 using namespace std;
 
-// ----------------------
 // Function definitions
-// ----------------------
 
 int getMemoryIndex(uint32_t address) {
 	if (address < 0x100 || address > 0x110 || (address - 0x100) % 4 != 0) return -1;
@@ -156,4 +154,5 @@ void executeBNE(const string& label, int Z) {
 void executeBAL(const string& label) {
 	if (label.empty()) cout << "Invalid Instruction." << endl;
 	else cout << "Branch will be taken to " << label << endl;
+
 }
